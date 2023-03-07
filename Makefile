@@ -23,9 +23,9 @@ EXE=main
 VPATH=$(wildcard src/*) $(IMGUI_SRC_PATH) $(dir GLFW_LIB)
 
 release : CFLAGS=-g -Wno-unused-result -ffunction-sections -fdata-sections -ffast-math -Wl,--gc-sections -Wl,--print-gc-sections
-release: all
 
 all: $(GLFW_LIB) $(EXE)
+release: all
 
 $(GLFW_LIB):
 	mkdir -p $(GLFW_BUILD_DIR)
